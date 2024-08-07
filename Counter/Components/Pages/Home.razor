@@ -1,0 +1,31 @@
+﻿@page "/"
+@rendermode InteractiveServer
+
+<PageTitle>Home</PageTitle>
+
+<h1>Hello, world!</h1>
+
+Welcome to your new app.
+
+
+<h2>TotalCount: @TotalCount</h2>
+
+<Counter Title = "Counter 1" OnClick="IncrementTotalCount" Increment = "1"/>
+<Counter Title = "Counter 2" OnClick="IncrementTotalCount" Increment = "2"/>
+
+<button @onclick="() => IncrementTotalCount(3)">TotalCount</button>
+
+
+<!-- <button @onclick="IncrementTotalCount">ClickToTotalCount</button> -->
+
+
+@code{
+
+    public int TotalCount {get; set;}
+
+    private void IncrementTotalCount(int increment)
+    {
+        TotalCount += increment;
+    }
+}
+
