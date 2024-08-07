@@ -1,0 +1,41 @@
+{
+  "Files": [
+    {
+      "Id": "/Users/cliu21/code/Level2/WebProgramming II/Counters/obj/Debug/net8.0/scopedcss/projectbundle/Counters.bundle.scp.css",
+      "PackagePath": "staticwebassets/Counters.bundle.scp.css"
+    },
+    {
+      "Id": "/Users/cliu21/code/Level2/WebProgramming II/Counters/wwwroot/app.css",
+      "PackagePath": "staticwebassets/app.css"
+    },
+    {
+      "Id": "/Users/cliu21/code/Level2/WebProgramming II/Counters/wwwroot/bootstrap/bootstrap.min.css",
+      "PackagePath": "staticwebassets/bootstrap/bootstrap.min.css"
+    },
+    {
+      "Id": "/Users/cliu21/code/Level2/WebProgramming II/Counters/wwwroot/bootstrap/bootstrap.min.css.map",
+      "PackagePath": "staticwebassets/bootstrap/bootstrap.min.css.map"
+    },
+    {
+      "Id": "/Users/cliu21/code/Level2/WebProgramming II/Counters/wwwroot/favicon.png",
+      "PackagePath": "staticwebassets/favicon.png"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.Counters.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.build.Counters.props",
+      "PackagePath": "build\\Counters.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.buildMultiTargeting.Counters.props",
+      "PackagePath": "buildMultiTargeting\\Counters.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.buildTransitive.Counters.props",
+      "PackagePath": "buildTransitive\\Counters.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

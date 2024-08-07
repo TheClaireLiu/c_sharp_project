@@ -1,0 +1,41 @@
+{
+  "Files": [
+    {
+      "Id": "/Users/cliu21/code/Level2/WebProgramming_2/c_sharp_projects/MadLibs/obj/Debug/net8.0/scopedcss/projectbundle/MadLibs.bundle.scp.css",
+      "PackagePath": "staticwebassets/MadLibs.bundle.scp.css"
+    },
+    {
+      "Id": "/Users/cliu21/code/Level2/WebProgramming_2/c_sharp_projects/MadLibs/wwwroot/app.css",
+      "PackagePath": "staticwebassets/app.css"
+    },
+    {
+      "Id": "/Users/cliu21/code/Level2/WebProgramming_2/c_sharp_projects/MadLibs/wwwroot/bootstrap/bootstrap.min.css",
+      "PackagePath": "staticwebassets/bootstrap/bootstrap.min.css"
+    },
+    {
+      "Id": "/Users/cliu21/code/Level2/WebProgramming_2/c_sharp_projects/MadLibs/wwwroot/bootstrap/bootstrap.min.css.map",
+      "PackagePath": "staticwebassets/bootstrap/bootstrap.min.css.map"
+    },
+    {
+      "Id": "/Users/cliu21/code/Level2/WebProgramming_2/c_sharp_projects/MadLibs/wwwroot/favicon.png",
+      "PackagePath": "staticwebassets/favicon.png"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.MadLibs.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.build.MadLibs.props",
+      "PackagePath": "build\\MadLibs.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.buildMultiTargeting.MadLibs.props",
+      "PackagePath": "buildMultiTargeting\\MadLibs.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.buildTransitive.MadLibs.props",
+      "PackagePath": "buildTransitive\\MadLibs.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
