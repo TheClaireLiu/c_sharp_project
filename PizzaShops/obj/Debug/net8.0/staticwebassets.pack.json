@@ -1,0 +1,41 @@
+{
+  "Files": [
+    {
+      "Id": "/Users/cliu21/code/Level2/WebProgramming_2/c_sharp_projects/PizzaShop/obj/Debug/net8.0/scopedcss/projectbundle/PizzaShop.bundle.scp.css",
+      "PackagePath": "staticwebassets/PizzaShop.bundle.scp.css"
+    },
+    {
+      "Id": "/Users/cliu21/code/Level2/WebProgramming_2/c_sharp_projects/PizzaShop/wwwroot/app.css",
+      "PackagePath": "staticwebassets/app.css"
+    },
+    {
+      "Id": "/Users/cliu21/code/Level2/WebProgramming_2/c_sharp_projects/PizzaShop/wwwroot/bootstrap/bootstrap.min.css",
+      "PackagePath": "staticwebassets/bootstrap/bootstrap.min.css"
+    },
+    {
+      "Id": "/Users/cliu21/code/Level2/WebProgramming_2/c_sharp_projects/PizzaShop/wwwroot/bootstrap/bootstrap.min.css.map",
+      "PackagePath": "staticwebassets/bootstrap/bootstrap.min.css.map"
+    },
+    {
+      "Id": "/Users/cliu21/code/Level2/WebProgramming_2/c_sharp_projects/PizzaShop/wwwroot/favicon.png",
+      "PackagePath": "staticwebassets/favicon.png"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.PizzaShop.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.build.PizzaShop.props",
+      "PackagePath": "build\\PizzaShop.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.buildMultiTargeting.PizzaShop.props",
+      "PackagePath": "buildMultiTargeting\\PizzaShop.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.buildTransitive.PizzaShop.props",
+      "PackagePath": "buildTransitive\\PizzaShop.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

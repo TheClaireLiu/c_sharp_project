@@ -1,0 +1,143 @@
+﻿@page "/"
+@rendermode InteractiveServer
+
+<PageTitle>Pizza Order</PageTitle>
+
+<h1 class="display-4 text-center p-5">Pizza Order</h1>
+
+<EditForm Model="Pizza" FormName="PizzaOrderForm" OnValidSubmit="CustomValidation" class="form bg-light border border-1 p-5" Enhance>
+  <DataAnnotationsValidator />
+  <CustomValidation @ref="customValidation"/>
+  <ValidationSummary />
+  @if (success)
+  {
+  <div class="alert alert-success">@successMessage</div>
+  }
+  <div class="form-group mb-3">
+    <label class="form-label" for="size">Size</label>
+    <InputSelect @bind-Value="Pizza.Size" class="form-select" id="size">
+       @*这里实现了双向绑定，当更改option的值value，更改的值将被设置在Pizza对象里。*@
+      <option value="">Select a size</option>
+      @foreach (var size in sizes)
+      {
+        <option value="@size">@size</option>
+      }
+    </InputSelect>
+  </div>
+
+  <div class="form-group mb-3">
+    <p>Choose up to 3 toppings</p>
+    @foreach (var topping in Pizza.Toppings)
+    {
+      <div class="form-check">
+        <InputCheckbox class="form-check-input" id="@topping.Value" @bind-Value="topping.IsChecked"/>
+        <label class="form-check-label" for="@topping.Value">@topping.Text</label>
+      </div>
+    }
+  </div>
+
+  <button class="btn btn-primary">Order Pizza</button>
+</EditForm>
+
+@code {
+  private static List<string> sizes = ["Small", "Medium", "Large"];
+  private static List<string> toppings = ["Pepperoni", "Sausage", "Ham", "Mushrooms", "Onions", "Peppers"];
+  private bool success = false;
+  private string successMessage = "";
+  
+  private class PizzaModel
+  {
+    [Required]
+    public string Size { get; set; } = "";
+    public List<CheckboxItem> Toppings { get; set; } = [];
+  }
+  [SupplyParameterFromForm]
+  private PizzaModel Pizza { get; set; } = new();
+
+  private CustomValidation? customValidation;
+  
+  protected override void OnInitialized()
+  {
+    foreach (var topping in toppings)
+    {
+      Pizza.Toppings.Add(
+        new CheckboxItem
+        {
+          Text = topping,
+          Value = topping
+        }
+      );
+    }
+  }
+
+  private void CustomValidation()
+  {
+    //清楚所有的错误
+    customValidation?.ClearErrors();
+    var errors = new Dictionary<string, List<string>>();
+    
+    List<string> selectedToppings = [];
+    foreach (var topping in Pizza.Toppings)
+    {
+      if (topping.IsChecked)
+      {
+        selectedToppings.Add(topping.Value);
+      }
+    }
+
+    int TotalToppings = selectedToppings.Count;
+    //验证数据，检查选择了多少种配料toppings
+    switch (Pizza.Size)
+    {
+      case "Small":
+        if (TotalToppings > 2)
+        {
+          //errors 是个Dictionary，
+          //void Dictionary<string, List<string>>.Add(string key, List<string> value),
+          //Add the specified key and value to the dictionary
+          //nameof(Pizza.Toppings) get the key's name of the property
+          errors.Add(nameof(Pizza.Toppings), new(){"Small pizza may not have more 2 toppings."});
+          //需要将此错误绑定到特定的输入，或者Model内的特定属性（Property），这里绑定到toppings' property
+        }
+        break;
+      case "Medium":
+        if (TotalToppings > 3)
+        {
+          errors.Add(nameof(Pizza.Toppings), new(){"Medium pizza may not have more 3 toppings."});
+          //需要将此错误绑定到特定的输入，或者Model内的特定属性（Property），这里绑定到toppings' property
+        }
+        break;
+      case "Large":
+        if (TotalToppings > 5)
+        {
+          errors.Add(nameof(Pizza.Toppings), new(){"Large pizza may not have more 5 toppings."});
+          //需要将此错误绑定到特定的输入，或者Model内的特定属性（Property），这里绑定到toppings' property
+        }
+        break;
+    }
+    //是否有errors
+    if (errors.Any())
+    {
+      //如果有，显示这些errors
+      customValidation?.DisplayErrors(errors);
+    }
+    else
+    {
+      OrderPizza();
+    }
+  }
+  
+  private void OrderPizza()
+  {
+    List<string> selectedToppings = [];
+    foreach (var topping in Pizza.Toppings)
+    {
+      if (topping.IsChecked)
+      {
+        selectedToppings.Add(topping.Value);
+      }
+    }
+    success = true;
+    successMessage = $"Your {Pizza.Size} pizza with {string.Join(", ", selectedToppings)}is on its way.";
+  }
+}
