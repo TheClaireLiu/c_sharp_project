@@ -1,0 +1,15 @@
+/* _content/Notebook/Components/Pages/Home.razor.rz.scp.css */
+dialog[b-aoj5l8g696] {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(255, 255, 255,0.9);
+}
+
+dialog[open][b-aoj5l8g696] {
+  display: grid;
+  align-content: center;
+}
+

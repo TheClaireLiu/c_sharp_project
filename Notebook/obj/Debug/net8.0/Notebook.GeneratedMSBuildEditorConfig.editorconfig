@@ -9,35 +9,35 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Notebook
 build_property.RootNamespace = Notebook
-build_property.ProjectDir = /Users/cliu21/RiderProjects/Notebook/
+build_property.ProjectDir = /Users/cliu21/code/Level2/WebProgramming_2/c_sharp_projects/Notebook/
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = /Users/cliu21/RiderProjects/Notebook
+build_property.MSBuildProjectDirectory = /Users/cliu21/code/Level2/WebProgramming_2/c_sharp_projects/Notebook
 build_property._RazorSourceGeneratorDebug = 
 
-[/Users/cliu21/RiderProjects/Notebook/Components/App.razor]
+[/Users/cliu21/code/Level2/WebProgramming_2/c_sharp_projects/Notebook/Components/App.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9BcHAucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/cliu21/RiderProjects/Notebook/Components/Layout/MainLayout.razor]
+[/Users/cliu21/code/Level2/WebProgramming_2/c_sharp_projects/Notebook/Components/Layout/MainLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9MYXlvdXQvTWFpbkxheW91dC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/cliu21/RiderProjects/Notebook/Components/Pages/Error.razor]
+[/Users/cliu21/code/Level2/WebProgramming_2/c_sharp_projects/Notebook/Components/Pages/Error.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9FcnJvci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/cliu21/RiderProjects/Notebook/Components/Routes.razor]
+[/Users/cliu21/code/Level2/WebProgramming_2/c_sharp_projects/Notebook/Components/Routes.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9Sb3V0ZXMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/cliu21/RiderProjects/Notebook/Components/_Imports.razor]
+[/Users/cliu21/code/Level2/WebProgramming_2/c_sharp_projects/Notebook/Components/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9fSW1wb3J0cy5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/cliu21/RiderProjects/Notebook/Components/Pages/Home.razor]
+[/Users/cliu21/code/Level2/WebProgramming_2/c_sharp_projects/Notebook/Components/Pages/Home.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9Ib21lLnJhem9y
 build_metadata.AdditionalFiles.CssScope = b-aoj5l8g696

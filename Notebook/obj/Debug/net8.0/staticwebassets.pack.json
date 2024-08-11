@@ -1,0 +1,41 @@
+{
+  "Files": [
+    {
+      "Id": "/Users/cliu21/code/Level2/WebProgramming_2/c_sharp_projects/Notebook/obj/Debug/net8.0/scopedcss/projectbundle/Notebook.bundle.scp.css",
+      "PackagePath": "staticwebassets/Notebook.bundle.scp.css"
+    },
+    {
+      "Id": "/Users/cliu21/code/Level2/WebProgramming_2/c_sharp_projects/Notebook/wwwroot/app.css",
+      "PackagePath": "staticwebassets/app.css"
+    },
+    {
+      "Id": "/Users/cliu21/code/Level2/WebProgramming_2/c_sharp_projects/Notebook/wwwroot/bootstrap/bootstrap.min.css",
+      "PackagePath": "staticwebassets/bootstrap/bootstrap.min.css"
+    },
+    {
+      "Id": "/Users/cliu21/code/Level2/WebProgramming_2/c_sharp_projects/Notebook/wwwroot/bootstrap/bootstrap.min.css.map",
+      "PackagePath": "staticwebassets/bootstrap/bootstrap.min.css.map"
+    },
+    {
+      "Id": "/Users/cliu21/code/Level2/WebProgramming_2/c_sharp_projects/Notebook/wwwroot/favicon.png",
+      "PackagePath": "staticwebassets/favicon.png"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.Notebook.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.build.Notebook.props",
+      "PackagePath": "build\\Notebook.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.buildMultiTargeting.Notebook.props",
+      "PackagePath": "buildMultiTargeting\\Notebook.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.buildTransitive.Notebook.props",
+      "PackagePath": "buildTransitive\\Notebook.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

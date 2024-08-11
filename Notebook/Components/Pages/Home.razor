@@ -1,61 +1,175 @@
 ﻿@page "/"
+@rendermode InteractiveServer
+@inject IConfiguration Config
 
 <PageTitle>Notebook</PageTitle>
 
 <h1 class="display-4 text-center p-5">Notebook</h1>
-
-<form class="bg-light border border-1 p-5 mb-5">
+@* OnSubmit调用异步函数，所以需要使用Lambda function *@
+<EditForm class="bg-light border border-1 p-5 mb-5"
+          Model="NewNote" 
+          OnSubmit="()=> CreateNoteAsync()" Enhance>
   <div class="form-group mb-3">
     <label for="newTitle" class="form-label">Title</label>
-    <input type="text" id="newTitle" class="form-control" />
+    <InputText @bind-Value="NewNote.Title" type="text" id="newTitle" class="form-control" />
   </div>
   <div class="form-group mb-3">
     <label for="newContent" class="form-label">Content</label>
-    <textarea id="newContent" class="form-control"></textarea>
+    <InputTextArea @bind-Value="NewNote.Content" id="newContent" class="form-control"></InputTextArea>
   </div>
 
   <button class="btn btn-primary">Add Note</button>
-</form>
+</EditForm>
 
 
 <div class="row">
   <!-- NOTE TEMPLATE -->
-  <div class="col-4">
-    <div class="card my-3">
-      <div class="card-header d-flex justify-content-end">
-        <button class="btn btn-light">
-          <i class="bi bi-pencil-square"></i>
-        </button>
-        <button class="btn btn-light">
-          <i class="bi bi-x-square"></i>
-        </button>
-      </div>
-      <div class="card-body">
-        <h2>Title</h2>
-        <p>Content</p>
+  @foreach (var note in notes)
+  {
+    <div class="col-4">
+      <div class="card my-3">
+        <div class="card-header d-flex justify-content-end">
+          <button class="btn btn-light" @onclick="() => DisplayDialog(note.Id)">
+            <i class="bi bi-pencil-square"></i>
+          </button>
+          <button class="btn btn-light" @onclick="() => DeleteNoteAsync(note.Id)">
+            <i class="bi bi-x-square"></i>
+          </button>
+        </div>
+        <div class="card-body">
+          <h2>@note.Title</h2>
+          <p>@note.Content</p>
+        </div>
       </div>
     </div>
-  </div>
+  }
+  
   <!-- NOTE TEMPLATE -->
 </div>
 
-<dialog>
-  <form class="bg-light border border-1 p-5 mb-5 m-auto w-75">
+@* 在点击编辑按钮时，动态显示该form，所以我们需要一种触发该属性是否应该出现的方法，使用boolean 变量 *@
+<dialog open="@showDialog">
+  <EditForm class="bg-light border border-1 p-5 mb-5 m-auto w-75"
+            Model="EditNote" OnSubmit="() => UpdateNoteAsync()" Enhance>
     <div class="form-group mb-3">
       <label for="title" class="form-label">Title</label>
-      <input type="text" id="title" class="form-control" />
+      <InputText @bind-Value="EditNote.Title" type="text" id="title" class="form-control" />
     </div>
     <div class="form-group mb-3">
       <label for="content" class="form-label">Content</label>
-      <textarea id="content" class="form-control"></textarea>
+      <InputTextArea @bind-Value="EditNote.Content" id="content" class="form-control"></InputTextArea>
     </div>
 
     <button type="submit" class="btn btn-primary me-3">Add Note</button>
     <button type="button" class="btn btn-secondary">Cancel</button>
-  </form>
+  </EditForm>
 </dialog>
 
 
 @code {
+  //如何将该connectionString保留在可以在任何地方访问的全局位置中
+  private string? connectionString;
+  private List<Note> notes = [];
+  private bool showDialog = false;
+  
+  //create a new model for new Note,用来绑定form中的数据
+  [SupplyParameterFromForm]
+  private Note NewNote { get; set; } = new();
+  
+  [SupplyParameterFromForm]
+  private Note EditNote { get; set; } = new();
+  
+  //设置为页面加载正常时，将其设置为打开状态，因为GetNotesAsync是异步的，所以此Method也需要时异步的
+  protected override async Task OnInitializedAsync()
+  {
+    connectionString = Config.GetConnectionString("default");
+    // create connection to the database
+    // var conn = new MySqlConnection(connectionString);
+    notes = await GetNotesAsync();
+    Console.WriteLine(notes.Count);
+  }
+
+  //从数据库获取所有笔记，并显示在页面上, 先创建一个Note.cs Model
+  // 创建一个方法用于获取数据库的所有数据,在页面加载时调用
+  private async Task<List<Note>> GetNotesAsync()
+  {
+    using (var conn = new MySqlConnection(connectionString))
+    {
+      // create a query, convert to a list
+      var sql = "SELECT * from Note";
+      var rows = await conn.QueryAsync<Note>(sql);
+      return rows.ToList();
+    }
+  }
+
+  //获取数据库的某一个Note
+  private async Task<Note> GetNoteAsync(int id)
+  {
+    using (var conn = new MySqlConnection(connectionString))
+    {
+      //query single async查询单异步
+      try
+      {
+        var sql = "SELECT * FROM Note WHERE Id = @Id";
+        return await conn.QuerySingleAsync<Note>(sql, new { Id = id });
+      }
+      catch (InvalidOperationException ex)
+      {
+        Console.WriteLine(ex.Message);
+        throw;
+      }
+    }
+  }
+  
+  private async Task DisplayDialog(int id)
+  {
+    showDialog = true;
+    //创建一个对象，绑定更新Form的数据到此对象
+    EditNote = await GetNoteAsync(id);
+    
+  }
+
+  // 创建一个方法，add note to database, 然后更新Form
+  private async Task CreateNoteAsync()
+  {
+    using (var conn = new MySqlConnection(connectionString))
+    {
+      var sql = "INSERT INTO Note(Title, Content) VALUE(@Title,@Content)";
+      //send the query to the database with the values
+      await conn.ExecuteAsync(sql, new
+      {
+        Title= NewNote.Title,
+        Content = NewNote.Content
+      });
+    }
+
+    NewNote = new(); //clear the note
+    notes = await GetNotesAsync(); //插入新的note之后，显示所有notes
+  }
+
+  private async Task UpdateNoteAsync()
+  {
+    using (var conn = new MySqlConnection(connectionString))
+    {
+      var sql = "Update Note SET Title = @Title, Content = @Content WHERE Id = @Id";
+      await conn.ExecuteAsync(sql, EditNote);
+    }
+
+    showDialog = false;
+    notes = await GetNotesAsync();
+  }
+
+  private async Task DeleteNoteAsync(int id)
+  {
+    using (var conn = new MySqlConnection(connectionString))
+    {
+      var sql = "DELETE FROM Note WHERE ID = @Id";
+      await conn.ExecuteAsync(sql, new { Id = id });
+    }
+
+    notes = await GetNotesAsync();
+  }
+
+  
   
 }
