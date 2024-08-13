@@ -5,7 +5,9 @@
 
 <h1 class="display-4 text-center p-5">Pizza Order</h1>
 
-<EditForm Model="Pizza" FormName="PizzaOrderForm" OnValidSubmit="CustomValidation" class="form bg-light border border-1 p-5" Enhance>
+<EditForm Model="Pizza" 
+          FormName="PizzaOrderForm" 
+          OnValidSubmit="CustomValidation" class="form bg-light border border-1 p-5" Enhance>
   
   <DataAnnotationsValidator />
   <CustomValidation @ref="customValidation"/>

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "R2NMJN657rFcznK7jZjS5PSCJv6O+5X9mrquQ8opGWM=",
+  "Hash": "e1/xb3lH5tNjWdvtfqmRLc6U2LMhnPdNG8BkIJ55ZYc=",
   "Source": "PizzaShop",
   "BasePath": "_content/PizzaShop",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "PizzaShop/wwwroot",
       "Source": "PizzaShop",
-      "ContentRoot": "/Users/cliu21/code/Level2/WebProgramming_2/c_sharp_projects/PizzaShop/wwwroot/",
+      "ContentRoot": "/Users/cliu21/code/Level2/WebProgramming_2/c_sharp_projects/PizzaShops/wwwroot/",
       "BasePath": "_content/PizzaShop",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "/Users/cliu21/code/Level2/WebProgramming_2/c_sharp_projects/PizzaShop/obj/Debug/net8.0/scopedcss/bundle/PizzaShop.styles.css",
+      "Identity": "/Users/cliu21/code/Level2/WebProgramming_2/c_sharp_projects/PizzaShops/obj/Debug/net8.0/scopedcss/bundle/PizzaShop.styles.css",
       "SourceId": "PizzaShop",
       "SourceType": "Computed",
-      "ContentRoot": "/Users/cliu21/code/Level2/WebProgramming_2/c_sharp_projects/PizzaShop/obj/Debug/net8.0/scopedcss/bundle/",
+      "ContentRoot": "/Users/cliu21/code/Level2/WebProgramming_2/c_sharp_projects/PizzaShops/obj/Debug/net8.0/scopedcss/bundle/",
       "BasePath": "_content/PizzaShop",
       "RelativePath": "PizzaShop.styles.css",
       "AssetKind": "All",
@@ -33,13 +33,13 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "/Users/cliu21/code/Level2/WebProgramming_2/c_sharp_projects/PizzaShop/obj/Debug/net8.0/scopedcss/bundle/PizzaShop.styles.css"
+      "OriginalItemSpec": "/Users/cliu21/code/Level2/WebProgramming_2/c_sharp_projects/PizzaShops/obj/Debug/net8.0/scopedcss/bundle/PizzaShop.styles.css"
     },
     {
-      "Identity": "/Users/cliu21/code/Level2/WebProgramming_2/c_sharp_projects/PizzaShop/obj/Debug/net8.0/scopedcss/projectbundle/PizzaShop.bundle.scp.css",
+      "Identity": "/Users/cliu21/code/Level2/WebProgramming_2/c_sharp_projects/PizzaShops/obj/Debug/net8.0/scopedcss/projectbundle/PizzaShop.bundle.scp.css",
       "SourceId": "PizzaShop",
       "SourceType": "Computed",
-      "ContentRoot": "/Users/cliu21/code/Level2/WebProgramming_2/c_sharp_projects/PizzaShop/obj/Debug/net8.0/scopedcss/projectbundle/",
+      "ContentRoot": "/Users/cliu21/code/Level2/WebProgramming_2/c_sharp_projects/PizzaShops/obj/Debug/net8.0/scopedcss/projectbundle/",
       "BasePath": "_content/PizzaShop",
       "RelativePath": "PizzaShop.bundle.scp.css",
       "AssetKind": "All",
@@ -52,13 +52,13 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "/Users/cliu21/code/Level2/WebProgramming_2/c_sharp_projects/PizzaShop/obj/Debug/net8.0/scopedcss/projectbundle/PizzaShop.bundle.scp.css"
+      "OriginalItemSpec": "/Users/cliu21/code/Level2/WebProgramming_2/c_sharp_projects/PizzaShops/obj/Debug/net8.0/scopedcss/projectbundle/PizzaShop.bundle.scp.css"
     },
     {
-      "Identity": "/Users/cliu21/code/Level2/WebProgramming_2/c_sharp_projects/PizzaShop/wwwroot/app.css",
+      "Identity": "/Users/cliu21/code/Level2/WebProgramming_2/c_sharp_projects/PizzaShops/wwwroot/app.css",
       "SourceId": "PizzaShop",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/cliu21/code/Level2/WebProgramming_2/c_sharp_projects/PizzaShop/wwwroot/",
+      "ContentRoot": "/Users/cliu21/code/Level2/WebProgramming_2/c_sharp_projects/PizzaShops/wwwroot/",
       "BasePath": "_content/PizzaShop",
       "RelativePath": "app.css",
       "AssetKind": "All",
@@ -74,10 +74,10 @@
       "OriginalItemSpec": "wwwroot/app.css"
     },
     {
-      "Identity": "/Users/cliu21/code/Level2/WebProgramming_2/c_sharp_projects/PizzaShop/wwwroot/bootstrap/bootstrap.min.css",
+      "Identity": "/Users/cliu21/code/Level2/WebProgramming_2/c_sharp_projects/PizzaShops/wwwroot/bootstrap/bootstrap.min.css",
       "SourceId": "PizzaShop",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/cliu21/code/Level2/WebProgramming_2/c_sharp_projects/PizzaShop/wwwroot/",
+      "ContentRoot": "/Users/cliu21/code/Level2/WebProgramming_2/c_sharp_projects/PizzaShops/wwwroot/",
       "BasePath": "_content/PizzaShop",
       "RelativePath": "bootstrap/bootstrap.min.css",
       "AssetKind": "All",
@@ -93,10 +93,10 @@
       "OriginalItemSpec": "wwwroot/bootstrap/bootstrap.min.css"
     },
     {
-      "Identity": "/Users/cliu21/code/Level2/WebProgramming_2/c_sharp_projects/PizzaShop/wwwroot/bootstrap/bootstrap.min.css.map",
+      "Identity": "/Users/cliu21/code/Level2/WebProgramming_2/c_sharp_projects/PizzaShops/wwwroot/bootstrap/bootstrap.min.css.map",
       "SourceId": "PizzaShop",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/cliu21/code/Level2/WebProgramming_2/c_sharp_projects/PizzaShop/wwwroot/",
+      "ContentRoot": "/Users/cliu21/code/Level2/WebProgramming_2/c_sharp_projects/PizzaShops/wwwroot/",
       "BasePath": "_content/PizzaShop",
       "RelativePath": "bootstrap/bootstrap.min.css.map",
       "AssetKind": "All",
@@ -112,10 +112,10 @@
       "OriginalItemSpec": "wwwroot/bootstrap/bootstrap.min.css.map"
     },
     {
-      "Identity": "/Users/cliu21/code/Level2/WebProgramming_2/c_sharp_projects/PizzaShop/wwwroot/favicon.png",
+      "Identity": "/Users/cliu21/code/Level2/WebProgramming_2/c_sharp_projects/PizzaShops/wwwroot/favicon.png",
       "SourceId": "PizzaShop",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/cliu21/code/Level2/WebProgramming_2/c_sharp_projects/PizzaShop/wwwroot/",
+      "ContentRoot": "/Users/cliu21/code/Level2/WebProgramming_2/c_sharp_projects/PizzaShops/wwwroot/",
       "BasePath": "_content/PizzaShop",
       "RelativePath": "favicon.png",
       "AssetKind": "All",

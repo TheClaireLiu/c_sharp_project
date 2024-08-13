@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/cliu21/code/Level2/WebProgramming_2/c_sharp_projects/PizzaShop/PizzaShop.csproj": {}
+    "/Users/cliu21/code/Level2/WebProgramming_2/c_sharp_projects/PizzaShops/PizzaShop.csproj": {}
   },
   "projects": {
-    "/Users/cliu21/code/Level2/WebProgramming_2/c_sharp_projects/PizzaShop/PizzaShop.csproj": {
+    "/Users/cliu21/code/Level2/WebProgramming_2/c_sharp_projects/PizzaShops/PizzaShop.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/cliu21/code/Level2/WebProgramming_2/c_sharp_projects/PizzaShop/PizzaShop.csproj",
+        "projectUniqueName": "/Users/cliu21/code/Level2/WebProgramming_2/c_sharp_projects/PizzaShops/PizzaShop.csproj",
         "projectName": "PizzaShop",
-        "projectPath": "/Users/cliu21/code/Level2/WebProgramming_2/c_sharp_projects/PizzaShop/PizzaShop.csproj",
+        "projectPath": "/Users/cliu21/code/Level2/WebProgramming_2/c_sharp_projects/PizzaShops/PizzaShop.csproj",
         "packagesPath": "/Users/cliu21/.nuget/packages/",
-        "outputPath": "/Users/cliu21/code/Level2/WebProgramming_2/c_sharp_projects/PizzaShop/obj/",
+        "outputPath": "/Users/cliu21/code/Level2/WebProgramming_2/c_sharp_projects/PizzaShops/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/cliu21/.nuget/NuGet/NuGet.Config"
